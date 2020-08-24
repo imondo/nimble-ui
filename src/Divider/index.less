@@ -1,0 +1,32 @@
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+  padding: 0 15px;
+  color: #B4B4B4;
+  font-size: 12px;
+  line-height: 24px;
+  border-color: #ebedf0;
+  border-style: solid;
+  border-width: 0;
+}
+
+.divider::before, .divider::after {
+  content: '';
+  display: block;
+  flex: 1;
+  box-sizing: border-box;
+  height: 1px;
+  border-color: inherit;
+  border-style: inherit;
+  border-width: 1px 0 0;
+  transform: scaleY(0.5);
+}
+
+.divider::before {
+  margin-right: 16px;
+}
+
+.divider::after {
+  margin-left: 16px;
+}
