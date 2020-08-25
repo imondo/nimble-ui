@@ -2,38 +2,13 @@
   position: relative;
   overflow: hidden;
   display: none;
-  transition: all 0.1s;
   .drawer-body {
     position: fixed;
     z-index: 9901;
-    width: 100%;
-    height: auto;
+    width: 0;
+    height: 0;
     background-color: #fff;
-    &--default {
-      width: auto;
-      padding: 30px 50px;
-      top: 50%;
-      left: 50%;
-      transform: translate3d(-50%, -50%, 0);
-    }
-    &--top {
-      top: 0;
-      left: 0;
-    }
-    &--bottom {
-      bottom: 0;
-      left: 0;
-    }
-    &--left {
-      top: 0;
-      left: 0;
-      width: 30%;
-    }
-    &--right {
-      top: 0;
-      right: 0;
-      width: 30%;
-    }
+    transition: all 0.1s;
   }
   .drawer-overlay {
     position: fixed;
@@ -45,10 +20,45 @@
     width: 100%;
     height: 100%;
     transition: opacity 0.5s ease-out;
+    opacity: 0;
     background-color: rgba(0, 0, 0, 0.6);
   }
   &.drawer-open {
     position: relative;
     display: block;
+    .drawer-overlay {
+      opacity: 1;
+    }
+    .drawer-body {
+      &--default {
+        width: auto;
+        padding: 30px 50px;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+      }
+      &--top {
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+      &--bottom {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+      }
+      &--left {
+        top: 0;
+        left: 0;
+        width: 30%;
+        height: 100%;
+      }
+      &--right {
+        top: 0;
+        right: 0;
+        width: 30%;
+        height: 100%;
+      }
+    }
   }
 }
