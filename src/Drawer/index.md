@@ -84,3 +84,4 @@ More skills for writing demo: https://d.umijs.org/guide/demo-principle
 | open     | 是否显示抽屉                                     | boolean | `false`  |
 | height   | 抽屉自定义高度                                   | string  | ''       |
 | position | 弹出位置，可选值为 `top` `bottom` `right` `left` | string  | `center` |
+| close    | 关闭抽屉                                         | event   | `void`   |
