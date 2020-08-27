@@ -27,6 +27,7 @@ export default class Toast extends Component<ToastProps, any> {
   };
 
   static show = (content: ReactNode | ToastProps) => {
+    Toast.unmountNode();
     if (!Toast.rqkToast) {
       Toast.rqkToast = document.createElement('div');
       Toast.rqkToast.classList.add('totast__wrapper');
@@ -43,6 +44,15 @@ export default class Toast extends Component<ToastProps, any> {
   static hide = () => {
     if (Toast.rqkToast) {
       document.body.removeChild(Toast.rqkToast);
+      Toast.rqkToast = null;
+    }
+  };
+
+  static unmountNode = () => {
+    const { rqkToast } = Toast;
+    if (rqkToast) {
+      ReactDOM.render(<></>, rqkToast);
+      document.body.removeChild(rqkToast);
       Toast.rqkToast = null;
     }
   };
