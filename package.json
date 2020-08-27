@@ -28,7 +28,8 @@
     ]
   },
   "dependencies": {
-    "react": "^16.12.0"
+    "react": "^16.12.0",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@umijs/preset-react": "1.x",
