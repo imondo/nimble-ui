@@ -1,7 +1,28 @@
 {
-  "private": true,
   "name": "rqk-ui",
   "version": "1.0.0",
+  "description": "一个轻量便捷的 React UI 库",
+  "keywords": [
+    "component",
+    "components",
+    "design",
+    "framework",
+    "frontend",
+    "react",
+    "react-component",
+    "ui",
+    "移动端",
+    "Mondo"
+  ],
+  "homepage": "https://github.com/one-pupil/rqk-ui",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/one-pupil/rqk-ui.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
