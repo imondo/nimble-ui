@@ -16,12 +16,6 @@ export default (props: any) => {
       document.body.classList.remove('overflow-hidden');
       document.body.removeChild(_container);
     }
-
-    if (['right', 'left'].includes(props.position)) {
-      // setDefaultHeight('100%');
-    } else {
-      // setDefaultHeight('30%');
-    }
   });
 
   const onClickBody = (props: any) => {
@@ -29,20 +23,23 @@ export default (props: any) => {
     document.body.classList.remove('overflow-hidden');
   };
 
-  return props.open && createPortal(
-    <div className={`drawer drawer-open`}>
-      <div
-        className={`drawer-body ${
-          props.position
-            ? 'drawer-body--' + props.position
-            : 'drawer-body--default'
-        } ${props.open ? 'drawer-body-open--' + props.position : ''}`}
-        style={{ height: `${defaultHeight}` }}
-      >
-        {props.children}
-      </div>
-      <div className="drawer-overlay" onClick={e => onClickBody(props)}></div>
-    </div>,
-    _container,
+  return (
+    props.open &&
+    createPortal(
+      <div className={`drawer drawer-open`}>
+        <div
+          className={`drawer-body ${
+            props.position
+              ? 'drawer-body--' + props.position
+              : 'drawer-body--default'
+          } ${props.open ? 'drawer-body-open--' + props.position : ''}`}
+          style={{ height: `${defaultHeight}` }}
+        >
+          {props.children}
+        </div>
+        <div className="drawer-overlay" onClick={e => onClickBody(props)}></div>
+      </div>,
+      _container,
+    )
   );
 };

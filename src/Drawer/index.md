@@ -68,7 +68,7 @@ export default () => {
         底部弹出 Drawer
       </button>
       <Drawer open={isChange} position={position} close={e => setChange(false)}>
-        <button style={{margin: '20px 20px 300px'}}>抽屉</button>
+        <button>抽屉</button>
       </Drawer>
     </div>
   );
