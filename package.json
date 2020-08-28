@@ -1,6 +1,6 @@
 {
   "name": "rqk-ui",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "一个轻量便捷的 React UI 库",
   "keywords": [
     "component",

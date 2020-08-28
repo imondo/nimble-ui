@@ -67,7 +67,11 @@ export default () => {
       >
         底部弹出 Drawer
       </button>
-      <Drawer open={isChange} position={position} close={e => setChange(false)}>
+      <Drawer
+        open={isChange}
+        position={position}
+        onClose={e => setChange(false)}
+      >
         <button>抽屉</button>
       </Drawer>
     </div>
@@ -79,9 +83,9 @@ More skills for writing demo: https://d.umijs.org/guide/demo-principle
 
 ## API
 
-| 参数     | 说明                                             | 类型    | 默认值   |
-| -------- | ------------------------------------------------ | ------- | -------- |
-| open     | 是否显示抽屉                                     | boolean | `false`  |
-| height   | 抽屉自定义高度                                   | string  | ''       |
-| position | 弹出位置，可选值为 `top` `bottom` `right` `left` | string  | `center` |
-| close    | 关闭抽屉                                         | event   | `void`   |
+| 参数     | 说明                                                | 类型    | 默认值   |
+| -------- | --------------------------------------------------- | ------- | -------- |
+| open     | 是否显示抽屉                                        | boolean | `false`  |
+| height   | 高度, 在 position 为 `top` `bottom` `center` 时使用 | string  | ''       |
+| position | 抽屉的方向，可选值为 `top` `bottom` `right` `left`  | string  | `center` |
+| onClose  | 关闭抽屉                                            | event   | `void`   |
