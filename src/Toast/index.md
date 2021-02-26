@@ -42,8 +42,8 @@ export default () => {
         style={{ margin: '10px' }}
         onClick={() => {
           Toast.show({
-            delay: 1500,
-            content: '指定停留时间',
+            delay: 3000,
+            content: '指定停留时间 3s',
           });
         }}
       >
