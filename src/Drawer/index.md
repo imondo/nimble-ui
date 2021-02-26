@@ -6,7 +6,7 @@ nav:
 
 ## Drawer
 
-抽屉
+抽屉组件
 
 通过 `position` 属性设置弹出位置，默认居中弹出，可以设置为 `top`、`bottom`、`left`、`right`
 
@@ -79,8 +79,6 @@ export default () => {
   );
 };
 ```
-
-More skills for writing demo: https://d.umijs.org/guide/demo-principle
 
 ## API
 

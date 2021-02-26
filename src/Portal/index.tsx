@@ -1,23 +1,16 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import { PropsWithChildren, useRef, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 
-type PortalProps = React.PropsWithChildren<{
+type PortalProps = PropsWithChildren<{
   node?: HTMLElement;
 }>;
 
-// 判断是否为浏览器环境
-const canUseDOM = !!(
-  typeof window !== 'undefined' &&
-  window.document &&
-  window.document.createElement
-);
-
 const Portal = ({ node, children }: PortalProps) => {
   // 使用ref记录内部创建的节点 初始值为null
-  const defaultNodeRef = React.useRef<HTMLElement | null>(null);
+  const defaultNodeRef = useRef<HTMLElement | null>(null);
 
   // 组件卸载时 移除该节点
-  React.useEffect(
+  useEffect(
     () => () => {
       if (defaultNodeRef.current) {
         document.body.removeChild(defaultNodeRef.current);
@@ -26,18 +19,15 @@ const Portal = ({ node, children }: PortalProps) => {
     [],
   );
 
-  // 如果非浏览器环境 直接返回 null 服务端渲染需要
-  if (!canUseDOM) return null;
-
   // 若用户未传入节点，Portal也未创建节点，则创建节点并添加至body
   if (!node && !defaultNodeRef.current) {
     const defaultNode = document.createElement('div');
-    defaultNode.className = 'drawer__wrapper';
+    defaultNode.className = 'portal__wrapper';
     defaultNodeRef.current = defaultNode;
     document.body.appendChild(defaultNode);
   }
 
-  return ReactDOM.createPortal(children, (node || defaultNodeRef.current)!);
+  return createPortal(children, (node || defaultNodeRef.current)!);
 };
 
 export default Portal;

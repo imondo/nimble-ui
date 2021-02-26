@@ -6,7 +6,7 @@ nav:
 
 ## Toast
 
-轻提示
+轻提示组件
 
 Demo:
 
@@ -68,12 +68,10 @@ export default () => {
 };
 ```
 
-More skills for writing demo: https://d.umijs.org/guide/demo-principle
-
 ## API
 
 | 参数    | 说明                               | 类型       | 默认值 |
 | ------- | ---------------------------------- | ---------- | ------ |
-| delay   | 自动关闭前停留的时间（单位：毫秒） | number     | `3000` |
-| content | 显示的内容                         | ReactNode  | -      |
+| delay   | 自动关闭前停留的时间（单位：毫秒） | number     | `1500` |
+| content | 显示的内容                         | ReactNode  | string | - |
 | close   | Toast 隐藏后的回调函数             | () => void | -      |

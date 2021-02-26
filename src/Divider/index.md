@@ -6,7 +6,7 @@ nav:
 
 ## Divider
 
-分割线
+分割线组件
 
 Demo:
 
@@ -16,8 +16,6 @@ import { Divider } from 'rqk-ui';
 
 export default () => <Divider text="文本" />;
 ```
-
-More skills for writing demo: https://d.umijs.org/guide/demo-principle
 
 ## API
 

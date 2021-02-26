@@ -1,6 +1,6 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
-import Portal from './Portal';
+import Portal from '../Portal';
 import './index.less';
 
 export default (props: any) => {
@@ -27,7 +27,7 @@ export default (props: any) => {
 
   return (
     <Portal node={node}>
-      <div className={`drawer drawer-open`}>
+      <div className="drawer__wrapper">
         <CSSTransition
           appear
           unmountOnExit

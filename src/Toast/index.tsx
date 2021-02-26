@@ -7,7 +7,7 @@ const contentIsToastProps = (content: any): content is ToastProps =>
 
 interface ToastProps {
   delay?: number;
-  content?: ReactNode | String;
+  content?: ReactNode | string;
   visible?: boolean;
   close?: () => void;
 }
