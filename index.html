@@ -11,29 +11,32 @@
       type="image/x-icon"
       href="https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png"
     />
-    <link rel="stylesheet" href="/rqk-ui/umi.css" />
+    <link rel="stylesheet" href="/nimble-ui/umi.66a33102.css" />
     <script>
-      window.routerBase = "/rqk-ui";
+      window.routerBase = "/nimble-ui";
     </script>
     <script>
-      //! umi version: 3.3.9
+      //! umi version: 3.5.41
     </script>
     <script>
       !(function () {
-        var e = localStorage.getItem("dumi:prefers-color"),
-          t = window.matchMedia("(prefers-color-scheme: dark)").matches,
-          r = ["light", "dark", "auto"];
+        var e =
+            navigator.cookieEnabled && void 0 !== window.localStorage
+              ? localStorage.getItem("dumi:prefers-color")
+              : "auto",
+          o = window.matchMedia("(prefers-color-scheme: dark)").matches,
+          t = ["light", "dark", "auto"];
         document.documentElement.setAttribute(
           "data-prefers-color",
-          e === r[2] ? (t ? r[1] : r[0]) : r.includes(e) ? e : r[0]
+          e === t[2] ? (o ? t[1] : t[0]) : t.indexOf(e) > -1 ? e : t[0]
         );
       })();
     </script>
-    <title>Index</title>
+    <title>Index - nimble-ui</title>
   </head>
   <body>
     <div id="root"></div>
 
-    <script src="/rqk-ui/umi.js"></script>
+    <script src="/nimble-ui/umi.f0008b0c.js"></script>
   </body>
 </html>
