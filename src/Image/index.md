@@ -12,7 +12,7 @@ Demo:
 
 ```tsx
 import React from 'react';
-import { Image } from 'rqk-ui';
+import { Image } from 'nimble-ui';
 
 export default () => {
   const [src, setSrc] = React.useState('');

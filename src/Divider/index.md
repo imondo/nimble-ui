@@ -12,7 +12,7 @@ Demo:
 
 ```tsx
 import React from 'react';
-import { Divider } from 'rqk-ui';
+import { Divider } from 'nimble-ui';
 
 export default () => <Divider text="文本" />;
 ```

@@ -12,7 +12,7 @@ Demo:
 
 ```tsx
 import React from 'react';
-import { Toast } from 'rqk-ui';
+import { Toast } from 'nimble-ui';
 
 export default () => {
   return (

@@ -14,7 +14,7 @@ Demo:
 
 ```tsx
 import React, { useState } from 'react';
-import { Drawer } from 'rqk-ui';
+import { Drawer } from 'nimble-ui';
 
 export default () => {
   const [isChange, setChange] = useState(false);

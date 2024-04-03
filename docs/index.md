@@ -1,6 +1,6 @@
 ---
 hero:
-  title: rqk-ui
+  title: nimble-ui
   desc: 一个轻巧快捷的 React UI 库
   actions:
     - text: Getting Started
@@ -15,5 +15,5 @@ features:
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/d1ee0c6f-5aed-4a45-a507-339a4bfe076c/k7bjsocq_w144_h144.png
     title: 便捷轻巧
     desc: 小巧方便
-footer: Open-source MIT Licensed | Copyright © 2020<br />Powered by [Mondo](https://github.com/one-pupil)
+footer: Open-source MIT Licensed | Copyright © 2020<br />Powered by [Mondo](https://github.com/imondo)
 ---

@@ -1,5 +1,5 @@
 {
-  "name": "rqk-ui",
+  "name": "nimble-ui",
   "version": "1.0.4",
   "description": "一个轻量便捷的 React UI 库",
   "keywords": [
@@ -14,11 +14,11 @@
     "移动端",
     "Mondo"
   ],
-  "homepage": "https://github.com/one-pupil/rqk-ui",
+  "homepage": "https://github.com/imondo/nimble-ui",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/one-pupil/rqk-ui.git"
+    "url": "git+https://github.com/imondo/nimble-ui.git"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
